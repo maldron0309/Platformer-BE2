@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9b07b1b-dfe8-4634-a523-aaffe8c16441" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Enemy 1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Enemy 1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Player_Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Player_Jump.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CS/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CS/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Simple 2D Platformer BE2/Sprites/Platforms.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Simple 2D Platformer BE2/Sprites/Platforms.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +100,8 @@
       <updated>1700146671042</updated>
       <workItem from="1700146671471" duration="17000" />
       <workItem from="1700268049542" duration="3223000" />
-      <workItem from="1700310362690" duration="2730000" />
+      <workItem from="1700310362690" duration="3346000" />
+      <workItem from="1700358255739" duration="2075000" />
     </task>
     <servers />
   </component>

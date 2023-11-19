@@ -68,21 +68,20 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(maxSpeed * (-1), rb.velocity.y);
         }
 
-        // Landing Platform
         if (rb.velocity.y < 0)
         {
-            Debug.DrawRay(rb.position, Vector3.down, Color.green);
 
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            // 수정된 레이캐스트 파라미터
+            RaycastHit2D rayHit = Physics2D.Raycast(rb.position + Vector2.right * 1f, Vector3.down, 1,
+                LayerMask.GetMask("Platform"));
 
             if (rayHit.collider != null)
             {
-                if (rayHit.distance < 0.5f)
+                if (rayHit.distance < 2f)
                 {
                     anim.SetBool("isJump", false);
                 }
-            }    
+            }
         }
-        
     }
-} 
+}
