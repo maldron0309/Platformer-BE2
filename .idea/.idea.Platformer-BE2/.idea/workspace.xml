@@ -7,6 +7,7 @@
     <list default="true" id="c9b07b1b-dfe8-4634-a523-aaffe8c16441" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CS/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CS/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +103,7 @@
       <workItem from="1700310362690" duration="3346000" />
       <workItem from="1700358255739" duration="2075000" />
       <workItem from="1700397938784" duration="4027000" />
+      <workItem from="1700490426246" duration="2113000" />
     </task>
     <servers />
   </component>
