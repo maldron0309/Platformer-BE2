@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -83,5 +84,37 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+        
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            OnDamaged(collision.transform.position);
+        }
+    }
+
+    private void OnDamaged(Vector2 targetPos)
+    {
+        // Change layer
+        gameObject.layer = 8;
+
+        sr.color = new Color(1, 1, 1,0.4f);
+        
+        // Reaction force
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rb.AddForce(new Vector2(dirc,1) * 7,ForceMode2D.Impulse);
+        
+        // Animation
+        anim.SetTrigger("DoDamaged");
+        Invoke("OffDamaged",2);
+    }
+
+    private void OffDamaged()
+    {
+        gameObject.layer = 7;
+        sr.color = new Color(1, 1, 1,1);
+
+    }
+    
 }
