@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9b07b1b-dfe8-4634-a523-aaffe8c16441" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Platformer-BE2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Aniamtion/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Aniamtion/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CS/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CS/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CS/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CS/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMap/Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMap/Platform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/93/9df6f95a/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CS/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -108,6 +107,9 @@
       <workItem from="1700397938784" duration="4027000" />
       <workItem from="1700490426246" duration="3427000" />
       <workItem from="1700516825957" duration="2125000" />
+      <workItem from="1700566479197" duration="1249000" />
+      <workItem from="1700664493323" duration="589000" />
+      <workItem from="1700671157413" duration="3111000" />
     </task>
     <servers />
   </component>
@@ -118,5 +120,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CS/PlayerMovement.cs</url>
+          <line>176</line>
+          <properties documentPath="C:\fork\Platformer-BE2\Assets\CS\PlayerMovement.cs" initialLine="176" containingFunctionPresentation="Method 'OnDie'">
+            <startOffsets>
+              <option value="4708" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4725" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
