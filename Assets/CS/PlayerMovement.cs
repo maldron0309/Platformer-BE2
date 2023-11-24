@@ -178,4 +178,9 @@ public class PlayerMovement : MonoBehaviour
         // Die Effect Jump
         rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
     }
+
+    public void VelocityZero()
+    {
+        rb.velocity = Vector2.zero;
+    }
 }
