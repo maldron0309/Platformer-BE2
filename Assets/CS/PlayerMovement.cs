@@ -15,13 +15,49 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     private Animator anim;
     private CapsuleCollider2D collider;
+    private AudioSource audio;
+
+    [SerializeField] private AudioClip audioJump;
+    [SerializeField] private AudioClip audioAttack;
+    [SerializeField] private AudioClip audioDamaged;
+    [SerializeField] private AudioClip audioItem;
+    [SerializeField] private AudioClip audioDie;
+    [SerializeField] private AudioClip audiofinish;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         collider = GetComponent<CapsuleCollider2D>();
+        audio = GetComponent<AudioSource>();
+    }
+
+    private void PlaySound(string action)
+    {
+        switch (action)
+        {
+            case "JUMP":
+                audio.clip = audioJump;
+                break;
+            case "ATTACK":
+                audio.clip = audioAttack;
+                break;
+            case "DAMAGED":
+                audio.clip = audioDamaged;
+                break;
+            case "ITEM":
+                audio.clip = audioItem;
+                break;
+            case "DIE":
+                audio.clip = audioDie;
+                break;
+            case "FINISH":
+                audio.clip = audiofinish;
+                break;
+        }
     }
 
     private void Update()
@@ -31,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             anim.SetBool("isJump", true);
+            PlaySound("JUMP");
         }
 
         // Stop speed
@@ -97,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
             if (rb.velocity.y < 0 && transform.position.y > collision.transform.position.y)
             {
                 OnAttack(collision.transform);
+                PlaySound("ATTACK");
             }
             else
             {
@@ -107,40 +145,53 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Item")
+        if (other.gameObject.activeSelf) // 추가된 부분
         {
-            // Point
-            // Contains : 대상 문자열에 비교문이 있으면 true
-            bool isBronze = other.gameObject.name.Contains("Bronze");
-            bool isSilver = other.gameObject.name.Contains("Silver");
-            bool isGold = other.gameObject.name.Contains("Gold");
+            if (other.gameObject.tag == "Item")
+            {
+                // Point
+                // Contains : 대상 문자열에 비교문이 있으면 true
+                bool isBronze = other.gameObject.name.Contains("Bronze");
+                bool isSilver = other.gameObject.name.Contains("Silver");
+                bool isGold = other.gameObject.name.Contains("Gold");
 
-            if (isBronze)
-                gameManager.stagePoint += 50;
-            else if (isSilver)
-                gameManager.stagePoint += 100;
-            else if (isGold)
-                gameManager.stagePoint += 300;
-            // Deactive Item
-            other.gameObject.SetActive(false);
-        }
-        else if (other.gameObject.tag == "Finish")
-        {
-            // Next Stage
-            gameManager.NextStage();
+                if (isBronze)
+                    gameManager.stagePoint += 50;
+                else if (isSilver)
+                    gameManager.stagePoint += 100;
+                else if (isGold)
+                    gameManager.stagePoint += 300;
+                // Deactive Item
+                other.gameObject.SetActive(false);
+                PlaySound("ITEM");
+            }
+            else if (other.gameObject.tag == "Finish")
+            {
+                // Next Stage
+                gameManager.NextStage();
+                PlaySound("FINISH");
+            }
         }
     }
+
 
     private void OnAttack(Transform enemy)
     {
-        // Point
-        gameManager.stagePoint += 100;
-        // Reaction Force
-        rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-        // Enemy Die
-        EnemyMovement enemyMove = enemy.GetComponent<EnemyMovement>();
-        enemyMove.OnDamaged();
+        if (enemy != null)
+        {
+            // Point
+            gameManager.stagePoint += 100;
+            // Reaction Force
+            rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+            // Enemy Die
+            EnemyMovement enemyMove = enemy.GetComponent<EnemyMovement>();
+            if (enemyMove != null)
+            {
+                enemyMove.OnDamaged();
+            }
+        }
     }
+
 
     private void OnDamaged(Vector2 targetPos)
     {
@@ -159,6 +210,7 @@ public class PlayerMovement : MonoBehaviour
         // Animation
         anim.SetTrigger("DoDamaged");
         Invoke("OffDamaged", 2);
+        PlaySound("DAMAGED");
     }
 
     private void OffDamaged()
@@ -177,6 +229,7 @@ public class PlayerMovement : MonoBehaviour
         collider.enabled = false;
         // Die Effect Jump
         rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+        PlaySound("DIE");
     }
 
     public void VelocityZero()

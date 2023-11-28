@@ -110,6 +110,7 @@
       <workItem from="1700664493323" duration="589000" />
       <workItem from="1700671157413" duration="3111000" />
       <workItem from="1700811358798" duration="2954000" />
+      <workItem from="1701163796387" duration="2480000" />
     </task>
     <servers />
   </component>
@@ -126,13 +127,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CS/PlayerMovement.cs</url>
-          <line>176</line>
+          <line>228</line>
           <properties documentPath="C:\fork\Platformer-BE2\Assets\CS\PlayerMovement.cs" initialLine="176" containingFunctionPresentation="Method 'OnDie'">
             <startOffsets>
-              <option value="4708" />
+              <option value="6209" />
             </startOffsets>
             <endOffsets>
-              <option value="4725" />
+              <option value="6226" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
